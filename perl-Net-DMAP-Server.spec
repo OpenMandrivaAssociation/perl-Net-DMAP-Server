@@ -1,26 +1,27 @@
-%define realname Net-DMAP-Server
+%define upstream_name    Net-DMAP-Server
+%define upstream_version 0.05
 
-Summary: Base class for D[A-Z]AP servers
-Name: perl-Net-DMAP-Server
-Version: 0.05
-Release: %mkrel 4
-License: Artistic
-Group: Development/Perl
-URL: http://search.cpan.org/dist/Net-DMAP-Server/
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Source: http://www.cpan.org/modules/by-module/Net/Net-DMAP-Server-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
+Summary:    Base class for D[A-Z]AP servers
+License:    Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildArch: noarch
 BuildRequires: perl-Net-DAAP-DMAP
 BuildRequires: perl-Net-Rendezvous-Publish
 BuildRequires: perl-POE-Component-Server-HTTP
+BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 A base class for D[A-Z]AP servers.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
