@@ -8,7 +8,7 @@ Release:	4
 Summary:	Base class for D[A-Z]AP servers
 License:	Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
+Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
