@@ -2,14 +2,14 @@
 %define upstream_version 0.05
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	Base class for D[A-Z]AP servers
 License:	Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Net-DMAP-Server
+Source0:	https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Net-DMAP-Server-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
